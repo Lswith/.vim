@@ -1,8 +1,10 @@
 " file ~/.vim/.vimrc
 " author: Luke Swithenbank
 call plug#begin('~/.vim/plugged')
-Plug 'z0mbix/vim-shfmt', { 'for': 'sh' }
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
+Plug 'w0rp/ale'
+Plug '/usr/local/opt/fzf'
+Plug 'hashivim/vim-terraform'
 call plug#end()
 
 set clipboard=unnamed
@@ -18,3 +20,13 @@ let g:shfmt_fmt_on_save = 1
 set t_Co=256
 set cursorline
 colorscheme onehalfdark
+
+" ALE
+let g:ale_fix_on_save = 1
+let g:ale_fixers = { 'sh': ['shfmt'] }
+
+" Terraform
+let g:terraform_fmt_on_save = 1
+
+" Shfmt
+let g:ale_sh_shfmt_options = '-ci -i 2'
