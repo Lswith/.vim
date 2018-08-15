@@ -11,6 +11,8 @@ set clipboard=unnamed
 set backspace=indent,eol,start
 syntax on
 filetype plugin indent on
+set autoindent
+set smartindent
 
 " Shfmt
 let g:shfmt_extra_args = '-ci -i 2'
@@ -30,3 +32,8 @@ let g:terraform_fmt_on_save = 1
 
 " Shfmt
 let g:ale_sh_shfmt_options = '-ci -i 2'
+
+" Yaml
+let g:ale_yaml_yamllint_options = '-d "{rules:{indentation: {indent-sequences: consistent}"'
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
