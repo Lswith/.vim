@@ -5,6 +5,9 @@ Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'w0rp/ale'
 Plug '/usr/local/opt/fzf'
 Plug 'hashivim/vim-terraform'
+Plug 'elixir-editors/vim-elixir'
+Plug 'chr4/nginx.vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 
 set clipboard=unnamed
@@ -25,7 +28,7 @@ colorscheme onehalfdark
 
 " ALE
 let g:ale_fix_on_save = 1
-let g:ale_fixers = { 'sh': ['shfmt'] }
+let g:ale_fixers = { 'sh': ['shfmt'] , 'elixir': ['mix_format'], 'yaml': ['prettier'] }
 
 " Terraform
 let g:terraform_fmt_on_save = 1
