@@ -1,20 +1,19 @@
 " file ~/.vim/.vimrc
 " author: Luke Swithenbank
 call plug#begin('~/.vim/plugged')
-Plug 'sonph/onehalf', { 'rtp': 'vim' }
+" FZF search in vim
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'hashivim/vim-terraform'
-Plug 'elixir-editors/vim-elixir'
-Plug 'chr4/nginx.vim'
+" Golang vim plugin
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'leafgarland/typescript-vim'
-Plug 'Shougo/denite.nvim'
+" Auto Completion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+" Auto Formatter
 Plug 'sbdchd/neoformat'
-Plug 'neomake/neomake'
+
+" Unused
+" Plug 'Shougo/denite.nvim'
+" Plug 'neomake/neomake'
 call plug#end()
 
 set clipboard=unnamed
@@ -29,11 +28,9 @@ set shiftwidth=2
 " ColorScheme
 set t_Co=256
 set cursorline
-colorscheme onehalfdark
 
-autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
-let g:deoplete#enable_at_startup = 1
+" let g:deoplete#enable_at_startup = 1
 let g:neoformat_basic_format_trim = 1
 let g:neoformat_basic_format_align = 1
 
